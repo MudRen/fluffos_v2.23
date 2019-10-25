@@ -240,7 +240,7 @@
  *
  * Compat status: Easily simulated.
  */
-#define OLD_ED
+#undef OLD_ED
 
 /* In ed auto-indent, 
  * 1) does the case line get indented after the switch() ?
@@ -394,7 +394,7 @@
 #define SUPPRESS_ARGUMENT_WARNINGS
 
 /* NO_RESETS: completely disable the periodic calling of reset() */
-#define NO_RESETS
+#undef NO_RESETS
 
 /* LAZY_RESETS: if this is defined, an object will only have reset()
  *   called in it when it is touched via call_other() or move_object()
@@ -484,7 +484,7 @@
  *   interactives as well as NPCs.  If this is defined, user.c will need a
  *   catch_tell(msg) method that calls receive(msg);
 */
-#define INTERACTIVE_CATCH_TELL
+#undef INTERACTIVE_CATCH_TELL
 
 /* RECEIVE_ED: define this if you want normal ed output to go to a 
      receive_ed() apply in the player ob.  Some errors still go directly
@@ -632,7 +632,7 @@
 #define NUM_EXTERNAL_CMDS 100
 
 /* PACKAGE_DB: efuns for external database access using msql */
-#define PACKAGE_DB
+#undef PACKAGE_DB
 
 /* If PACKAGE_DB is defined above, you must pick ONE of the following supported
  * databases
@@ -640,7 +640,7 @@
 #ifdef PACKAGE_DB
 #undef USE_MSQL 
 #undef MSQL
-#define USE_MYSQL 1
+#define USE_MYSQL 2
 #define MY_SQL
 #endif
 
@@ -855,7 +855,7 @@
    SAVE_GZ_EXTENSION: save extension for compressed files
  */
 #undef HAVE_ZLIB
-#define PACKAGE_COMPRESS
+#undef PACKAGE_COMPRESS
 #define SAVE_GZ_EXTENSION ".o.gz"
 
 /* CALL_OTHER_TYPE_CHECK: enable type checking for call_other()
@@ -884,7 +884,7 @@
 #define ALLOW_INHERIT_AFTER_FUNCTION
 #undef ALLOW_INHERIT_AFTER_GLOBAL_VARIABLES
 /*PACKAGE_ASYNC: adds some efuns for asyncronous IO */
-#define PACKAGE_ASYNC
+#undef PACKAGE_ASYNC
 
 #define PACKAGE_DSLIB
 #define PROG_REF_TYPE int

@@ -6,7 +6,7 @@
 
 #Make the non-argument config be Dead Souls
 if ! [ $1 ]; then
-ARG="ds"
+ARG="h"
 else
 ARG=$1
 fi
@@ -29,7 +29,7 @@ echo "For Foundation I:	./configure foundation"
 echo "For Foundation II:./configure foundation2"
 echo "For Nightmare IV:	./configure nm4"
 echo "----"
-echo "With no options, this script defaults to Dead Souls."
+echo "With no options, this script defaults to local_options.h."
 exit
 fi
 

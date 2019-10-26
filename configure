@@ -47,8 +47,8 @@ echo "Cygwin detected."
 export WINDOWS='#define WINDOWS'
 else
 # Some stuff for Dead Souls not on Cygwin
-echo "Moving around some DS specific files..."
 if [ $ARG == "ds" ] || [ $ARG == "ds.debug" ]; then
+echo "Moving around some DS specific files..."
 if ! [ -f ../bin/mudos.bak ]; then
 \rm -f ../bin/mudos.bak
 \mv -f ../bin/mudos.cfg ../bin/mudos.bak

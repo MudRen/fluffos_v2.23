@@ -49,13 +49,13 @@ else
 # Some stuff for Dead Souls not on Cygwin
 if [ $ARG == "ds" ] || [ $ARG == "ds.debug" ]; then
 echo "Moving around some DS specific files..."
-if ! [ -f ../bin/mudos.bak ]; then
-\rm -f ../bin/mudos.bak
-\mv -f ../bin/mudos.cfg ../bin/mudos.bak
-\cp -f ../bin/mudos.cfg.orig ../lib/secure/cfg/mudos.cfg
-ln -s ../lib/secure/cfg/mudos.cfg ../bin/mudos.cfg
-echo "File moves done"
-fi
+# if ! [ -f ../bin/mudos.bak ]; then
+# \rm -f ../bin/mudos.bak
+# \mv -f ../bin/mudos.cfg ../bin/mudos.bak
+# \cp -f ../bin/mudos.cfg.orig ../lib/secure/cfg/mudos.cfg
+# ln -s ../lib/secure/cfg/mudos.cfg ../bin/mudos.cfg
+# echo "File moves done"
+# fi
 fi
 fi
 
@@ -96,7 +96,7 @@ echo " "
 echo "make -j 1"
 echo " "
 echo "*********"
-cp -f ../extra/wolfpaw/* . 
+cp -f ../extra/wolfpaw/* .
 echo "#include \"../extra/wolfpaw/configure.h\"" >> local_options
 else
 echo "No Wolfpaw config needed."

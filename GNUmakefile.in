@@ -8,7 +8,7 @@
 # **** TARGETS AND THEIR CORRECT USAGE ****
 #
 # COMPILATION TARGETS:
-# 
+#
 # all:		compile all the files
 #
 # install:	make all, then move the files to the correct directories
@@ -70,7 +70,7 @@ VPATH = $(OBJDIR)
 
 OBJ=$(addprefix $(OBJDIR)/,$(subst .c,.o,$(SRC)))
 
-$(OBJDIR)/%.o: %.c 
+$(OBJDIR)/%.o: %.c
 	$(CC) $(CFLAGS) $(OPTIMIZE) -o $@ -c $<
 
 $(OBJDIR)/lex.o: lex.c preprocess.c cc.h grammar.tab.c
@@ -252,6 +252,7 @@ distclean: neat
 	-cp -f GNUmakefile.in GNUmakefile
 	-rm -f Dependencies tmpdepend
 	-rm -f semantic* packages/semantic*
+	-rm -rf tmp
 	-touch Dependencies
 
 include Dependencies
